@@ -188,7 +188,7 @@ public abstract class AbstractJMSRunnable implements JMSRunnable {
 				result = NO_OK;
 			}
 			
-			this.messageService.updateMessage(id, type,formId,version, busiId, result);
+			this.messageService.receMessageDealOver(id, type,formId,version, busiId, result);
 		}
 	}
 	

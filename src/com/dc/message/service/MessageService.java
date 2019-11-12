@@ -32,7 +32,7 @@ public interface MessageService {
 	 * @param result
 	 * @return
 	 */
-	public boolean updateMessage(String id,String type,String from,String version,String bussId,String result);
+	public boolean receMessageDealOver(String id,String type,String from,String version,String bussId,String result);
 	
 	/**
 	 * 消息更新 发送成功后
@@ -45,7 +45,7 @@ public interface MessageService {
 	 * @param result
 	 * @return
 	 */
-	public boolean updateMessage(String id,String type,String from,String version,String bussId,String conntent,String result);
+	public boolean sendMessageOver(String id,String type,String from,String version,String bussId,String conntent,String result);
 	
 	/**
 	 * 消息更新 （暂不用）

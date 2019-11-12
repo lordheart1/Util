@@ -25,7 +25,7 @@ public class MessageServiceImpl implements MessageService {
 		return mBean.getId();
 	}
 
-	public boolean updateMessage(String id, String type,String from,String version, String bussId,
+	public boolean receMessageDealOver(String id, String type,String from,String version, String bussId,
 			String result) {
 		
 		MessageBean mBean = this.messageRepository.findOne(id);
@@ -57,7 +57,7 @@ public class MessageServiceImpl implements MessageService {
 		return mBean != null;
 	}
 
-	public boolean updateMessage(String id, String type, String from,
+	public boolean sendMessageOver(String id, String type, String from,
 			String version, String bussId, String conntent, String result) {
 		
 		MessageBean mBean = this.messageRepository.findOne(id);
