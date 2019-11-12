@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context  
+            http://www.springframework.org/schema/context/spring-context.xsd  
+            http://www.springframework.org/schema/rabbit  
+            http://www.springframework.org/schema/rabbit/spring-rabbit-1.0.xsd
+                http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd   
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd   
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+            
+	<!-- 连接服务配置 -->
+	<rabbit:connection-factory id="connectionFactory"
+		host="${rab_ip}" username="${rab_user_name}" password="${rab_user_pwd}" port="${rab_port}" virtual-host="message_host"/>
+		
+	<rabbit:admin connection-factory="connectionFactory" />
+
+	<rabbit:template id="amqpTemplate" connection-factory="connectionFactory"
+		exchange="gxzs_change" />
+
+	<!-- rabbit:template id="amqpTemplate" connection-factory="connectionFactory"/-->
+	
+
+	<rabbit:admin connection-factory="connectionFactory" />
+
+	<rabbit:queue name="WebSender" id="WebSender" durable="true" auto-delete="false" exclusive="false"  />
+
+	<rabbit:topic-exchange name="gxzs_change">
+		<rabbit:bindings>
+			<rabbit:binding queue="WebSender" pattern=""/>
+		</rabbit:bindings>
+	</rabbit:topic-exchange>
+
+	<bean id="jmsSender" class="com.dc.util.jms.RabbitJmsSender">
+		<property name="template" ref="amqpTemplate"/>
+	</bean>
+	<bean id="objectSender" class="com.dc.jms.impl.JmsSenderImpl">
+		<property name="messageService" ref="jmsMessageService"/>
+	</bean>
+	
+	<bean id="jmsMessageService" class="com.dc.message.service.impl.DefaultJmsMessageImpl"/>
+</beans> 

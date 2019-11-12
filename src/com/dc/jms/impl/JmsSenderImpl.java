@@ -89,5 +89,13 @@ public class JmsSenderImpl implements JmsSenderObject {
 		
 		this.sendObject(obj, type,v, busiId);;
 	}
+
+	public MessageService getMessageService() {
+		return messageService;
+	}
+
+	public void setMessageService(MessageService messageService) {
+		this.messageService = messageService;
+	}
 	
 }
