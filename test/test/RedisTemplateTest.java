@@ -18,7 +18,7 @@ public class RedisTemplateTest extends AbstractJUnit4SpringContextTests{
 	@Test
 	public void test() {
 		
-		this.redisTemplate.
+		
 	}
 
 }

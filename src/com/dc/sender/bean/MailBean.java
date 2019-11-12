@@ -2,7 +2,7 @@ package com.dc.sender.bean;
 
 import com.dc.sender.annotation.JmsBean;
 
-@JmsBean(type = "111")
+@JmsBean(type = "112")
 public class MailBean {
 
 	private String content;

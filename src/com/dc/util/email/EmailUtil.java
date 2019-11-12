@@ -42,7 +42,7 @@ public class EmailUtil {
 		bean.setSubject(sub);
 		bean.setRecievers(email);
 	
-		jmsSender.sendObject(bean, SEND_EMAIL_TYPE + busiType,busiId );
+		jmsSender.sendObject(bean,busiId );
 		return true;
 	}
 }
