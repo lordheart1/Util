@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="Util/out/Util.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/Util/Util.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="true" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.mybatis.service"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.message.service.impl"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.http"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.hibernate.cache.region"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.esb.bean"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.jsonfile"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.jms.thread"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.message.repository"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.keyvalue"/>
+        <folder path="/Util/src/META-INF"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.lbs.bean"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.encryption.rsa"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.ice"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.spring.aspect"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.file"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.hibernate.cache.impl"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.jms"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.string"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.jms.handle"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.keyvalue.bean"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.msg"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.base.bean"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.spring.context.parse"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.ice.impl"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.lbs"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.date"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.spring"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.esb.domain"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.jms"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.hibernate.cache.strategy"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.map"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.solr"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.hibernate.cache"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.message.service"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.region"/>
+        <javaElement handleIdentifier="=Util/src&lt;org.apache.solr.client.solrj.beans"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.marshaller"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.encryption"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.rand"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.mybatis.service.impl"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.email"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.sender.annotation"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.mobile"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.mybatis.service.config"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.money"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.pass"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.config"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.jndi"/>
+        <javaElement handleIdentifier="=Util/src&lt;com.dc.util.qq"/>
+    </selectedElements>
+</jardesc>

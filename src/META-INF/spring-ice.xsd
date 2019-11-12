@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>    
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"    
+    xmlns="http://www.dc.com/schema/ice" targetNamespace="http://www.dc.com/schema/ice"    
+    elementFormDefault="qualified">    
+    <xsd:element name="remote">    
+        <xsd:complexType>    
+            <xsd:attribute name="id" type="xsd:string" />    
+            <xsd:attribute name="interface" type="xsd:string" />    
+            <xsd:attribute name="proxy" type="xsd:string" />    
+        </xsd:complexType>    
+    </xsd:element>    
+</xsd:schema>  
