@@ -13,7 +13,8 @@
                 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd   
             http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd   
             http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
-            
+     
+     <context:property-placeholder location="classpath:props/*.properties" />  
 	<!-- 连接服务配置 -->
 	<rabbit:connection-factory id="connectionFactory"
 		host="${rab_ip}" username="${rab_user_name}" password="${rab_user_pwd}" port="${rab_port}" virtual-host="message_host"/>
@@ -39,9 +40,12 @@
 	<bean id="jmsSender" class="com.dc.util.jms.RabbitJmsSender">
 		<property name="template" ref="amqpTemplate"/>
 	</bean>
+	
 	<bean id="objectSender" class="com.dc.jms.impl.JmsSenderImpl">
-		<property name="messageService" ref="jmsMessageService"/>
+		<property name="messageService">
+			<bean class="com.dc.message.service.impl.DefaultJmsMessageImpl"/>
+		</property>
 	</bean>
 	
-	<bean id="jmsMessageService" class="com.dc.message.service.impl.DefaultJmsMessageImpl"/>
+	
 </beans> 

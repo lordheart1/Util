@@ -65,7 +65,7 @@ public class JmsSenderImpl implements JmsSenderObject {
 		
 		String text = jsonMessage.toString();
 		
-		logger.info("jms_send:" + text);
+		logger.debug("jms_send:" + text);
 		
 		this.messageSender.sendText(text);
 		
