@@ -1,6 +1,5 @@
 package com.dc.util.ice;
 
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -8,24 +7,17 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import javax.annotation.Resource;
-
-import org.aopalliance.intercept.MethodInterceptor;
-import org.aopalliance.intercept.MethodInvocation;
-import org.springframework.stereotype.Repository;
-
-import com.zeroc.Ice.Current;
-
 import com.dc.base.bean.NodePage;
 import com.dc.mybatis.service.MybatisService;
 import com.dc.util.spring.SpringUtil;
 import com.kdy.base.PageBean;
+import com.zeroc.Ice.Current;
 
-public interface BaseAdapter{
+public class BaseAdapter{
 	
 	public static final Set<String> METHOD_NAMES = new HashSet<String>(Arrays.asList("findBean", "find","findPage"));
 	
-	default public PageBean findBean(int cid, String queryId,
+	public PageBean findBean(int cid, String queryId,
 			Map<String, String> param, String[] idList, Current __current) {
 		
 		MybatisService myBatisManager = (MybatisService)SpringUtil.getApplicationContext().getBean("myBatisManager");
@@ -39,7 +31,7 @@ public interface BaseAdapter{
 		return this.getPageBean(pageBean);
 	}
 	
-	default public PageBean find(int cid,String queryId, Map<String, String> param,
+	public PageBean find(int cid,String queryId, Map<String, String> param,
 			Current __current) {
 		 MybatisService myBatisManager = (MybatisService)SpringUtil.getApplicationContext().getBean("myBatisManager");
 		 
@@ -49,7 +41,7 @@ public interface BaseAdapter{
 		return this.getPageBean(pageBean);
 	}
 	
-	default public PageBean findPage(int cid,String queryId, Map<String, String> param,
+	public PageBean findPage(int cid,String queryId, Map<String, String> param,
 			int page, int rows, Current __current) {
 		 MybatisService myBatisManager = (MybatisService)SpringUtil.getApplicationContext().getBean("myBatisManager");
 		 
@@ -58,7 +50,7 @@ public interface BaseAdapter{
 		return this.getPageBean(pageBean);
 	}
 	
-	default public PageBean getPageBean(NodePage bean){
+	public PageBean getPageBean(NodePage bean){
 		
 		PageBean result = new PageBean();
 
